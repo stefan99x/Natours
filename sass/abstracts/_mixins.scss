@@ -41,27 +41,30 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breackpoint) {
-
   @if $breackpoint == phone {
-    @media (max-width: 37.5em) {    // 600px
+    @media only screen and (max-width: 37.5em) {
+      // 600px
       @content;
     }
   }
 
   @if $breackpoint == tab-port {
-    @media (max-width: 56.25em) {   // 900px
+    @media only screen and (max-width: 56.25em) {
+      // 900px
       @content;
     }
   }
 
   @if $breackpoint == tab-land {
-    @media (max-width: 75em) {      // 1200px
+    @media only screen and (max-width: 75em) {
+      // 1200px
       @content;
     }
   }
 
   @if $breackpoint == big-desktop {
-    @media (min-width: 112.5em) {   // 1800px
+    @media only screen and (min-width: 112.5em) {
+      // 1800px
       @content;
     }
   }
